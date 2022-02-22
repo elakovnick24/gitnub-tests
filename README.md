@@ -26,4 +26,4 @@
 7. Searching Soft Assertion
 8. Checking this page have example JUnit 5
 
-![Screen1](src/test/resources/screencast/screencast 2022-02-23 00-19-40.gif)
+![Screen1](https://github.com/elakovnick24/gitnub-tests/blob/master/src/test/resources/screencast/screencast%202022-02-23%2000-19-40.gif)
