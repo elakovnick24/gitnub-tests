@@ -13,31 +13,23 @@ public class WikiPage {
             softAssertion = $(".Box-row:nth-child(17) .flex-1"),
             listCodeExample = $(".markdown-body");
 
-
-
-    public WikiPage checkWiliOpened() {
-        headerWiki.shouldHave(text("Welcome to the selenide wiki!"));
-        return this;
+    public void checkWikiOpened(String wikiHeader) {
+        headerWiki.shouldHave(text(wikiHeader));
     }
 
-    public WikiPage searchPageSoftAssertion(String softAssertions) {
+    public void searchPageSoftAssertion(String softAssertions) {
         wikiPageFilter.setValue(softAssertions).pressEnter();
-        return this;
     }
 
-    public WikiPage openSoftAssertion() {
+    public void openSoftAssertion() {
         softAssertion.click();
-        return this;
     }
 
-    public WikiPage shouldHaveExampleExtensions() {
-        listCodeExample.shouldHave(text("JUnit5 extension"));
-        return this;
+    public void shouldHaveExampleExtensions(String jUnitExample) {
+        listCodeExample.shouldHave(text(jUnitExample));
     }
 
-    public WikiPage shouldHaveExampleUsingJUnit5() {
-        listCodeExample.shouldHave(text("Using JUnit5 extend test class:"));
-        return this;
+    public void shouldHaveExampleUsingJUnit5(String jUnitUsing) {
+        listCodeExample.shouldHave(text(jUnitUsing));
     }
-
 }

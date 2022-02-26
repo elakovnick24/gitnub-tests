@@ -13,13 +13,11 @@ public class RepoSelenidePage {
     wikiTab = $("#wiki-tab > span:nth-child(2)");
 
 
-    public RepoSelenidePage shouldBeSelenide() {
-        selenidePageHeader.shouldHave(text("selenide / selenide"));
-        return this;
+    public void shouldBeSelenide(String nameRepo) {
+        selenidePageHeader.shouldHave(text(nameRepo));
     }
 
-    public RepoSelenidePage shouldHaveWikiTab() {
+    public void shouldHaveWikiTab() {
         wikiTab.click();
-        return this;
     }
 }
